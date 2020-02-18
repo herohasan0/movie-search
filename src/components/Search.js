@@ -18,7 +18,7 @@ const Search = props => {
   };
 
   return (
-    <form className="search">
+    <form className="search movies">
       <input
         value={searchValue}
         onChange={handleSearchInputChanges}

@@ -1,12 +1,8 @@
-.App {
-  text-align: center;
-}
-
 .movies {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
+  display: flex; /* For display prop: https://www.w3schools.com/cssref/playit.asp?filename=playcss_display&preval=flex */
+  flex-wrap: wrap; /* For flex-wrap prop: https://www.w3schools.com/cssref/playit.asp?filename=playcss_flex-wrap&preval=wrap */
+  flex-direction: row; /* For flex-direction prop: https://www.w3schools.com/cssref/playit.asp?filename=playcss_flex-direction&preval=row */
+  justify-content: center; /* For justify-content prop: https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start */
 }
 
 .App-header h2 {
@@ -25,6 +21,10 @@
   font-size: calc(5px + 2vmin);
 }
 
+.movie img {
+  max-height: 296px;
+}
+
 .errorMessage {
   margin: auto;
   font-weight: bold;
@@ -32,10 +32,6 @@
 }
 
 .search {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   margin: 96px 0;
 }
 
