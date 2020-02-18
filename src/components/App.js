@@ -37,10 +37,6 @@ const reducer = (state, action) => {
 };
 
 function App() {
-  // const [loading, setLoading] = useState(true);
-  // const [movies, setMovies] = useState([]);
-  // const [errorMessage, setErrorMessage] = useState(null);
-
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -51,8 +47,6 @@ function App() {
           type: 'SEARCH_MOVIES_SUCCESS',
           payload: jsonResponse.Search
         });
-        // setMovies(jsonResponse.Search);
-        // setLoading(false);
       });
   }, []);
 
@@ -60,8 +54,6 @@ function App() {
     dispatch({
       type: 'SEARCH_MOVIES_REQUEST'
     });
-    // setLoading(true);
-    // setErrorMessage(null);
 
     fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=15c4d16a`)
       .then(response => response.json())
@@ -71,15 +63,11 @@ function App() {
             type: 'SEARCH_MOVIES_SUCCESS',
             payload: jsonResponse.Search
           });
-          // setMovies(jsonResponse.Search);
-          // setLoading(false);
         } else {
           dispatch({
             type: 'SEARCH_MOVIES_FAILURE',
             error: jsonResponse.Error
           });
-          // setErrorMessage(jsonResponse.Error);
-          // setLoading(false);
         }
       });
   };
