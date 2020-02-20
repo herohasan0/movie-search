@@ -153,3 +153,5 @@ That would be same with that if we were using `useState`:
 setMovies(jsonResponse.Search);
 setLoading(false);
 ```
+
+SOURCE: <https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/>
